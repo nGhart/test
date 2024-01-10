@@ -155,6 +155,7 @@ app.post("/webhook", async (req, res) => {
       !body.entry[0].changes ||
       !body.entry[0].changes[0].value
     ) {
+      res.send("Recived a request");
       return res.sendStatus(404);
     }
 
